@@ -92,6 +92,7 @@ class CityInputField extends StatelessWidget {
         try {
           return s.getWeather(cityName);
         } on NetworkException catch (e) {
+          // ignore: avoid_print
           print(e.toString());
           ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(
